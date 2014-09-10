@@ -1,0 +1,150 @@
+/* style.css
+ * This file provides css styles.
+ */
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color: #F1F1F1;
+}
+
+/* header footer common */
+header, footer {
+	width: 100%;
+	text-align: center;
+	color: #fff;
+}
+
+/* content width */
+.title, .tips, section {
+	width: 600px;
+}
+
+@media ( max-width : 600px) {
+	.title, .tips, section {
+		width: 100%;
+	}
+}
+
+/* alignment */
+.title, .tips, section {
+	margin: 0 auto;
+}
+
+/* foreground color */
+.title, .tips {
+	background-color: #aaa;
+}
+
+td {
+	border-bottom: 1px solid #aaa;
+}
+/* background color */
+table {
+	background-color: #fff;
+}
+
+/* positions */
+header {
+	padding-top: 20px;
+	font-weight: bolder;
+	font-size: 1.3em;
+}
+
+footer {
+	position: relative;
+}
+
+.title, .tips {
+	height: 30px;
+	padding-top: 10px;
+	position: relative;
+}
+
+.title {
+	border-radius: 10px 10px 0 0;
+}
+
+.tips {
+	border-radius: 0 0 10px 10px;
+}
+
+table {
+	table-layout: fixed;
+	word-wrap: break-word;
+	position: relative;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.content {
+	padding: 5px;
+	width: 100%;
+}
+
+.content textarea {
+	height: 1.2em;
+	font-size: 1em;
+	resize: none;
+	width: 100%;
+	border: none;
+	background-color: transparent;
+}
+
+/* buttons */
+.detailBtn {
+	position: absolute;
+	left: 20px;
+	top: 10px;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.addBtn {
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.detailBtn img, .addBtn img {
+	width: 20px;
+	height: 20px;
+}
+
+.deleteBtn {
+	position: absolute;
+	right: 0;
+	width: 20px;
+	height: 1.2em;
+	padding: 5px;
+	border-color: transparent;
+}
+
+/* dynamic effect */
+tr:hover .deleteBtn {
+	background: url('images/remove.png') no-repeat 5px 8px;
+	cursor: pointer;
+}
+
+tr:hover .content {
+	background-color: #DDF2F9;
+}
+
+#dbserviceinfo {
+	border-top: 1px solid #fff;
+}
+
+#dbserviceinfo td {
+	background-color: #aaa;
+	padding: 5px;
+	color: #fff;
+}
+
+.fieldname {
+	text-align: right;
+	border-right: 1px solid #fff;
+}

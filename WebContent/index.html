@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Java DB Sample Application</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<header>
+		<div class='title'>
+			Java DB Web Starter
+			<button class='detailBtn' onclick="toggleServiceInfo()"
+				title='toggle service info'>
+				<img src='images/detail.png' alt='detail' />
+			</button>
+			<button class='addBtn' onclick="addItem()" title='add record'>
+				<img src='images/add.png' alt='add' />
+			</button>
+		</div>
+	</header>
+	<section id='dbserviceinfo' style='display: none;'>
+		<table>
+			<tbody>
+				<tr>
+					<td class='fieldname'>Service Name</td>
+					<td id='envServiceName'></td>
+				</tr>
+				<tr>
+					<td class='fieldname'>DB Name</td>
+					<td id='envDbName'></td>
+				</tr>
+				<tr>
+					<td class='fieldname'>Host</td>
+					<td id='envHost'></td>
+				</tr>
+				<tr>
+					<td class='fieldname'>Port</td>
+					<td id='envPort'></td>
+				</tr>
+				<tr>
+					<td class='fieldname'>User Name</td>
+					<td id='envUser'>*****</td>
+				</tr>
+				<tr>
+					<td class='fieldname'>Password</td>
+					<td id='envPassword'>*****</td>
+				</tr>
+				<tr>
+					<td class='fieldname'>URL</td>
+					<td id='envUrl'></td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	<section>
+		<table id='notes' class='records' border='0' cellspacing='0'
+			cellpadding='0'>
+			<tbody></tbody>
+		</table>
+	</section>
+	<footer>
+		<div class='tips'>
+			Click the Add button to add a record,thanks you. 谢谢
+			<button class='addBtn' onclick="addItem()" title='add record'>
+				<img src='images/add.png' alt='add' />
+			</button>
+		</div>
+	</footer>
+	<script type="text/javascript" src="util.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
