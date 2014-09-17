@@ -110,7 +110,7 @@ public class ServiceDispatcher {
     public static String getMainMenu() {  
         StringBuffer buffer = new StringBuffer();  
         buffer.append("您好，请回复数字选择服务：").append("\n\n");  
-        buffer.append("1  车主电话查询").append("\n"); 
+        //buffer.append("1  车主电话查询").append("\n"); 
         buffer.append("2  小区班车时刻表").append("\n");  
         /*
         buffer.append("3  周边搜索").append("\n");  
