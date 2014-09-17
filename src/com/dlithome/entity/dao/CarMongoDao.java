@@ -1,5 +1,6 @@
 package com.dlithome.entity.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.dlithome.entity.beans.CarBean;
@@ -66,8 +67,17 @@ public class CarMongoDao implements CarDAOInter {
 
 	@Override
 	public List<CarBean> getAllCars() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<CarBean> bs = new ArrayList<CarBean> ();
+		DBCursor cursor = cars.find();
+		while (cursor.hasNext()) {
+			CarBean b = new CarBean ();
+			DBObject c = cursor.next();
+			b.setCar((String) c.get("car"));
+			b.setPhone((String) c.get("phone"));
+			bs.add(b);
+		}
+		return bs;
 	}
 
 	@Override
