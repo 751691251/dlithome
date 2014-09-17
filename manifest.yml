@@ -1,4 +1,4 @@
-applications:
+
   disk_quota: 1024M
   host: dlithome
   name: dlithome
