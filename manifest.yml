@@ -1,5 +1,5 @@
-
-  disk_quota: 1024M
+applications:
+- disk_quota: 1024M
   host: dlithome
   name: dlithome
   path: dlithome.war
