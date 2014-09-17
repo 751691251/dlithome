@@ -29,7 +29,7 @@ public class CarService implements ServiceInterface {
 		if (content.equals("1")) { 
 			resp =  getHelpMenu();
 		} else if (content.equalsIgnoreCase("la")) {
-			List <CarBean> cBeans = new CarDAO().getAllCars();
+			List <CarBean> cBeans = new CarMongoDao().getAllCars();
 			for (CarBean o : cBeans) {
 				resp = resp + getResp(o) + "\n----------------\n";
 			}
@@ -41,14 +41,14 @@ public class CarService implements ServiceInterface {
 				car = arr[0].toUpperCase();
 				if (car.getBytes().length == 5) {car = "辽B"+ car;}
 				
-				cBean = new CarDAO().find(car);
+				cBean = new CarMongoDao().find(car);
 				if (cBean != null) {return getResp(cBean);}
 				{
 					resp = "车牌：" + car + " 没找到啊没找到.要不你加一下? 输入1看看添加指令.";
 				}
 				
 			} else if (arr[1].equalsIgnoreCase("delete")) {
-				if (new CarDAO().deleteCar(arr[0].toUpperCase())) {
+				if (new CarMongoDao().deleteCar(arr[0].toUpperCase())) {
 					resp = "车牌：" + arr[0] + "刚刚被删除了";
 				} else {
 					resp = "车牌：" + arr[0] + "没删成.";
@@ -65,18 +65,18 @@ public class CarService implements ServiceInterface {
 					return resp;
 				}
 				
-				cBean = new CarDAO().find(car);
+				cBean = new CarMongoDao().find(car);
 				if (cBean != null) {
 					CarBean uBean = new CarBean ();
 					uBean.setCar(car);
 					uBean.setPhone(phone);
-					if (new CarDAO().updateCar(uBean)) {
+					if (new CarMongoDao().updateCar(uBean)) {
 						resp = "车牌：" + car + " 让我给更新了,厉害吧!";
 					} else {
 						resp = "车牌：" + car + " 没更新成,肿么回事,你是不是搞错了.";
 					}
 				} else {
-					new CarDAO().addCar(car, phone);
+					new CarMongoDao().addCar(car, phone);
 					resp = "车牌：" + car + ",联系电话:" + phone + " 已经被加入到数据库中．";
 				}
 			}
