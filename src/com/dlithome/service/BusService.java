@@ -50,7 +50,7 @@ public class BusService implements ServiceInterface {
 			buffer.append("--百合发车---小区发车--").append("\n\n");
 			
 			for (int i = 0; i < ithome.length; i++) {
-				buffer.append("---" + baihe[i] + "-------" + ithome[i] + "-----");
+				buffer.append("---" + baihe[i] + "-------" + ithome[i] + "-----").append("\n");
 			}
 			/*
 			buffer.append("---6:00--------6:15-----").append("\n");
@@ -75,6 +75,7 @@ public class BusService implements ServiceInterface {
 			buffer.append("---19:15-------19:30----").append("\n");
 			buffer.append("---19:45-------20:00----").append("\n\n");
 			*/
+			buffer.append("\n");
 			buffer.append("--排队上车--文明乘车--").append("\n");
 		}
 		return buffer.toString();
