@@ -17,7 +17,7 @@ public class CarMongoDao implements CarDAOInter {
 
 	public CarMongoDao() {
 		super();
-		cars = SimpleMongoDBHelper.getCollection("cars");
+		cars = SimpleMongoDBHelper.getDB("dlithome").getCollection("cars");
 	}
 
 	@Override

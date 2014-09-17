@@ -35,12 +35,13 @@ public class SimpleMongoDBHelper {
 		db = getMongoConnection().getDB(sdb);
 		return db;
 	}
-
+/*
 	public static DB getDB () {
-		return getDB("projects");
+		return getDB("cars");
 	}
 	
 	public static DBCollection getCollection (String n) {
 		return getDB().getCollection(n);
 	}
+	*/
 }
